@@ -4,3 +4,112 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
+
+
+/* Основные переменные */
+:root {
+    --background-color: rgb(255, 255, 255);
+    --background-image:
+        repeating-linear-gradient(
+            90deg, 
+            #d3d3d3 0px, 
+            #d3d3d3 2px, 
+            transparent 2px, 
+            transparent 4px
+        ),
+        repeating-linear-gradient(
+            180deg, 
+            #d3d3d3 0px, 
+            #d3d3d3 2px, 
+            transparent 2px, 
+            transparent 4px
+        ),
+        linear-gradient(
+            to bottom, 
+            #e7e7e7 0.01%, 
+            #1a1a1a 100%
+        );
+    --text-color: #000000;
+    --font-family: 'Inter', sans-serif;
+    --font-acent-family: 'Press Start 2P', sans-serif;
+}
+
+/* Светлая тема */
+:root.theme-light {
+    --background-color: rgb(255, 255, 255);
+    --background-image:
+        repeating-linear-gradient(
+            90deg, 
+            #d3d3d3 0px, 
+            #d3d3d3 2px, 
+            transparent 2px, 
+            transparent 4px
+        ),
+        repeating-linear-gradient(
+            180deg, 
+            #d3d3d3 0px, 
+            #d3d3d3 2px, 
+            transparent 2px, 
+            transparent 4px
+        ),
+        linear-gradient(
+            to bottom, 
+            #e7e7e7 0.01%, 
+            #1a1a1a 100%
+        );
+    --text-color: #000000;
+}
+
+/* Тёмная тема */
+:root.theme-dark {
+    --background-color: rgb(0, 0, 0);
+    --background-image:
+        repeating-linear-gradient(
+            90deg, 
+            #000000 0px, 
+            #000000 2px, 
+            transparent 2px, 
+            transparent 4px
+        ),
+        repeating-linear-gradient(
+            180deg, 
+            #000000 0px, 
+            #000000 2px, 
+            transparent 2px, 
+            transparent 4px
+        ),
+        linear-gradient(
+            to bottom, 
+            #007f0c 0.01%, 
+            #004306 100%
+        );
+    --text-color: rgba(0, 204, 20, 1);
+}
+
+/* Предпочтение тёмной темы пользователем */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: rgb(0, 0, 0);
+        --background-image:
+            repeating-linear-gradient(
+                90deg, 
+                #000000 0px, 
+                #000000 2px, 
+                transparent 2px, 
+                transparent 4px
+            ),
+            repeating-linear-gradient(
+                180deg, 
+                #000000 0px, 
+                #000000 2px, 
+                transparent 2px, 
+                transparent 4px
+            ),
+            linear-gradient(
+                to bottom, 
+                #007f0c 0.01%, 
+                #004306 100%
+            );
+        --text-color: rgba(0, 204, 20, 1);
+    }
+}
