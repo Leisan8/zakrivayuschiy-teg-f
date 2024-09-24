@@ -120,6 +120,7 @@
 .main {
   display: flex;
   width: 44rem;
+  margin-bottom: 5rem;
 }
 
 .card {
@@ -171,6 +172,7 @@
   height: 2.5rem;
   font-family: var(--font-acent-family);
   font-size: 14px;
+  transition: box-shadow 0.3s ease;
 }
 
 .save-button {
@@ -180,5 +182,47 @@
   height: 2.5rem;
   font-family: var(--font-acent-family);
   font-size: 14px;
-  margin-top: 5rem;
+  transition: box-shadow 0.3s ease;
+}
+
+
+.card__like-button:focus {
+  outline: none;
+  box-shadow: 2px 2px 0px var(--text-color);
+}
+
+.save-button:focus {
+  outline: none;
+  box-shadow: 2px 2px 0px var(--text-color);
+}
+
+.button__text {
+  display: block;
+  position: relative;
+}
+
+.button__text::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--text-color);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.button__text:hover::before {
+  transform: scaleX(1);
+}
+
+.button__text span,
+.button__text svg {
+  position: relative;
+  z-index: 1;
+  mix-blend-mode: difference;
+  color: var(--inverse-text-color);
+  transition: color 0.5s ease;
 }

@@ -33,6 +33,7 @@
     --font-family: 'Inter', sans-serif;
     --font-acent-family: 'Press Start 2P', sans-serif;
     --watermark-border-color: rgb(255, 255, 255);
+    --inverse-text-color: #ffffff;
 }
 
 /* Светлая тема */
@@ -60,6 +61,7 @@
         );
     --text-color: #000000;
     --watermark-border-color: rgb(255, 255, 255);
+    --inverse-text-color: #ffffff;
 }
 
 /* Тёмная тема */
@@ -87,6 +89,7 @@
         );
     --text-color: rgba(0, 204, 20, 1);
     --watermark-border-color: rgb(0, 0, 0);
+    --inverse-text-color: rgba(0, 204, 20, 1);
 }
 
 /* Предпочтение тёмной темы пользователем */
@@ -115,5 +118,6 @@
             );
         --text-color: rgba(0, 204, 20, 1);
         --watermark-border-color: rgb(0, 0, 0);
+        --inverse-text-color: rgba(0, 204, 20, 1);
     }
 }
