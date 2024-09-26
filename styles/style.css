@@ -240,7 +240,7 @@
 
 .like-icon .contour {
   fill: var(--text-color);
-  transition: fill 0.3s;
+  transition: fill 0.3s linear;
 }
 
 .like-icon .core {
@@ -277,4 +277,66 @@
   fill: red;
   transition: fill 0.3s;
   transition-delay: 0.05s;
+}
+
+.like-icon.is-liked .contour {
+  fill: red;
+  transition-delay: 0.06s;
+}
+
+
+.like-icon.is-liked .core {
+  fill: red;
+  transition-delay: 0s;
+}
+
+.like-icon.is-liked .main-body {
+  fill: red;
+  transition-delay: 0.05s;
+}
+
+.like-icon.is-liked .contour {
+  fill: red;
+  transition-delay: 0.06s;
+}
+
+.like-icon.is-liked .sparks {
+  opacity: 1;
+  transition-delay: 0.3s;
+  animation: sparks_on 0.3s ease-in;
+}
+
+.like-icon.is-liked .core {
+  animation: heart_scale 0.3s ease-in;
+  animation-delay: 0.1s;
+}
+
+.like-icon.is-liked .main-body {
+  animation: heart_scale 0.3s ease-in;
+  animation-delay: 0.1s;
+}
+
+@keyframes heart_scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform-origin: center;
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes sparks_on {
+  0% {
+    fill: transparent;
+  }
+  50% {
+    fill: red;
+  }
+  100% {
+    fill: transparent;
+  }
 }
