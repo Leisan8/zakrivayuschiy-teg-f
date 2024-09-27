@@ -340,3 +340,48 @@
     fill: transparent;
   }
 }
+
+.subscription-dialog {
+  background-color: var(--background-color);
+  font-size: 14px;
+  text-transform: uppercase;
+  line-height: 1.5;
+  font-family: var(--font-acent-family);
+}
+
+.subscription-dialog {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--text-color);
+  gap: 2rem;
+}
+
+.dialog__content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  width: 357px;
+  padding-top: 2rem;
+}
+
+.dialog__content-img {
+  width: 3rem;
+}
+
+.dialog__button__text {
+  background: transparent;
+  border: 2px solid var(--text-color);
+  color: var(--text-color);
+  padding: 0.5rem 3rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+}
+
+dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.8);
+} 

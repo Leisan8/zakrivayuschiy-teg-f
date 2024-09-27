@@ -72,10 +72,33 @@
     </main>
     <footer>
       <span class="button__text">
-        <button class="save-button">
+        <button 
+          class="save-button"
+          onclick="window['dialog-id'].showModal()" 
+          aria-controls="dialog-id"
+        >
           <img src="./svg/floppy.svg" alt="Save Icon" />
           <span>Сохранить на память</span>
         </button>
+
+        <dialog id="dialog-id" class='subscription-dialog'>
+          <span class="dialog__content">
+            <img class="dialog__content-img" src="./svg/floppy.svg" alt="Checked Icon" />
+            <span>
+              <p>Вставьте</p>
+              <p>дискету, чтобы</p>
+              <p>продолжить</p>
+            </span>
+          </span>
+          <button 
+            class="dialog__button__text"
+            type="submit"
+            onclick="window['dialog-id'].close()"
+          >
+            OK
+          </button>
+        </dialog> 
+
       </span>
       <div class="test"></div>
     </footer>
