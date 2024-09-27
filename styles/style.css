@@ -119,6 +119,8 @@
 
 .main {
   display: flex;
+  flex-direction: column;
+  gap: 3rem;
   width: 44rem;
   margin-bottom: 5rem;
 }
@@ -402,4 +404,32 @@ dialog::backdrop {
     flex-direction: column;
     align-items: center;
   }
+}
+
+.filter-1 {
+  filter: grayscale(100%);
+}
+
+.filter-2 {
+  filter: invert(100%);
+}
+
+.filter-3 {
+  filter: contrast(300%);
+}
+
+.filter-4 {
+  filter: sepia(100%);
+}
+
+.filter-5 {
+  filter: blur(20px);
+}
+
+.filter-6 {
+  filter: saturate(300%);
+}
+
+.filter-7 {
+  filter: brightness(150%) hue-rotate(90deg);
 }
