@@ -114,7 +114,7 @@
   transition: transform 0.3s ease; 
 }
 
-.theme-menu__button:hover::after {
+.theme-menu__button:focus::after {
   transform: scaleX(1); 
 }
 
@@ -176,6 +176,7 @@
   font-family: var(--font-acent-family);
   font-size: 14px;
   transition: box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
 .save-button {
@@ -203,7 +204,6 @@
 .button__text {
   display: block;
   position: relative;
-  cursor: pointer;
 }
 
 .button__text::before {
@@ -232,12 +232,12 @@
   transition: color 0.5s ease;
 }
 
-.button__text img {
+.button__text .save-button-img {
   filter: brightness(1) saturate(1);
   transition: filter 0.5s ease; 
 }
 
-.button__text:hover img {
+.button__text:hover .save-button-img {
   filter: brightness(0) invert(1); 
 }
 
@@ -362,9 +362,10 @@
   text-transform: uppercase;
   line-height: 1.5;
   font-family: var(--font-acent-family);
+  display: none;
 }
 
-.subscription-dialog {
+.subscription-dialog[open] {
   display: flex;
   flex-direction: column;
   border: 2px solid var(--text-color);
@@ -395,6 +396,7 @@
   margin-left: 2rem;
   margin-right: 2rem;
   margin-bottom: 1rem;
+  cursor: pointer;
 }
 
 dialog::backdrop {
