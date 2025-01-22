@@ -72,6 +72,7 @@
   border: none;
   text-transform: uppercase;
   transition: opacity 0.3s ease;
+  cursor: pointer;
 }
 
 .theme-menu__button:not(:disabled) {
@@ -185,6 +186,7 @@
   font-family: var(--font-acent-family);
   font-size: 14px;
   transition: box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
 
@@ -201,6 +203,7 @@
 .button__text {
   display: block;
   position: relative;
+  cursor: pointer;
 }
 
 .button__text::before {
@@ -229,9 +232,19 @@
   transition: color 0.5s ease;
 }
 
+.button__text img {
+  filter: brightness(1) saturate(1);
+  transition: filter 0.5s ease; 
+}
+
+.button__text:hover img {
+  filter: brightness(0) invert(1); 
+}
+
 .like-icon {
   border: 2px solid transparent;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .like-icon:focus {
