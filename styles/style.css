@@ -48,11 +48,11 @@
   flex-direction: column;
   border: 2px solid var(--text-color);
   gap: 1.5rem;
-  padding-bottom: 3rem;
+  padding-bottom: 2rem;
 }
 
 .header__title {
-  padding-top: 10.1rem;
+  padding-top: 8rem;
   font-size: 65px;
 }
 
@@ -128,6 +128,7 @@
 }
 
 .card {
+  position: relative;
   border: 2px solid var(--text-color);
   background-image: none; 
   background-color: var(--background-color);
@@ -148,9 +149,9 @@
 }
 
 .card__image-watermark {
-  position: relative;
-  left: 36rem;
-  top: -42.5rem;
+  position: absolute;
+  left: 82%;
+  top: 7%;
   opacity: 0.5;
   mix-blend-mode: hard-light;
   font-family: var(--font-acent-family);
@@ -167,7 +168,7 @@
   display: flex;
   justify-content: end;
   padding: 1.6rem;
-  gap: 1.5rem;
+  gap: 0.1rem;
 }
 
 .card__like-button {
@@ -184,12 +185,12 @@
 .save-button {
   background-color: transparent;
   border: 2px solid var(--text-color);
-  width: 20.3rem;
-  height: 2.5rem;
+  padding: 1rem;
   font-family: var(--font-acent-family);
   font-size: 14px;
   transition: box-shadow 0.3s ease;
   cursor: pointer;
+  margin-bottom: 5rem;
 }
 
 
@@ -302,13 +303,13 @@ dialog::backdrop {
   background-color: rgb(0 0 0 / 0.75);
 } 
 
-@media (max-width: 1440px) {
-  .header {
-    width: 100%;
-  }
-  .main {
-    width: 100%;
-  }
+@media (max-width: 1439px) {
+    .header {
+      width: 100%;
+    }
+    .main {
+      width: 100%;
+   }
   .card__image {
     width: 100%;
     height: auto;
@@ -355,4 +356,17 @@ dialog::backdrop {
 .dialog-button-container {
   display: flex;
   justify-content: center;
+}
+
+@media (min-width: 900px) and (max-width: 1440px) {
+  .card {
+    max-width: 700px;
+    margin: auto;
+  }
+}
+
+@media (max-width: 899px) {
+  .card {
+      max-width: 100%; 
+  }
 }
