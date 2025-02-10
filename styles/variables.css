@@ -1,2 +1,37 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 
+/* Основные переменные */
+:root {
+    --font-primary: 'Inter', system-ui, sans-serif;
+    --font-acent-family: 'Press Start 2P', sans-serif;
+
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+
+
+    --background-color: rgb(255, 255, 255);
+    --background-image:
+        repeating-linear-gradient(
+            90deg, 
+            #d3d3d3 0px, 
+            #d3d3d3 2px, 
+            transparent 2px, 
+            transparent 4px
+        ),
+        repeating-linear-gradient(
+            180deg, 
+            #d3d3d3 0px, 
+            #d3d3d3 2px, 
+            transparent 2px, 
+            transparent 4px
+        ),
+        linear-gradient(
+            to bottom, 
+            #e7e7e7 0.01%, 
+            #1a1a1a 100%
+        );
+    --text-color: #000000;
+    
+    --watermark-border-color: rgb(255, 255, 255);
+    --inverse-text-color: #ffffff;
+}

@@ -24,14 +24,15 @@
   background-position: center;
   background-attachment: fixed;
 
-  font-family: var(--font-family);
+  font-family: var(--font-primary);
+  font-variation-settings: 'wght' var(--font-weight-normal);
+
   color: var(--text-color);
-  font-weight: var(--font-weight-normal);
 
   display: flex;
   flex-direction: column;
   align-items: center; 
-  height: 100vh; 
+  min-height: 100vh; 
 
 }
 
@@ -128,13 +129,13 @@
 }
 
 .card {
-  position: relative;
   border: 2px solid var(--text-color);
   background-image: none; 
   background-color: var(--background-color);
 }
 
 .card__title {
+  font-variation-settings: 'wght' var(--font-weight-bold);
   border: 2px solid var(--text-color);
   padding: 0.4rem;
 }
@@ -148,10 +149,14 @@
   font-size: 18px;
 }
 
+.card__image-wrapper {
+  position: relative;
+}
+
 .card__image-watermark {
   position: absolute;
-  left: 82%;
-  top: 7%;
+  right: 5%;
+  top: 3%;
   opacity: 0.5;
   mix-blend-mode: hard-light;
   font-family: var(--font-acent-family);
@@ -161,7 +166,10 @@
         1px -1px 0 var(--watermark-border-color),  
         -1px 1px 0 var(--watermark-border-color),  
         1px 1px 0 var(--watermark-border-color);
-  -webkit-text-stroke: 1px var(--watermark-border-color);
+
+  @supports (-webkit-text-stroke: 1px var(--watermark-border-color)) {
+    -webkit-text-stroke: 1px var(--watermark-border-color);
+  }
 }
 
 .card__footer {
@@ -204,12 +212,12 @@
   box-shadow: 2px 2px 0px var(--text-color);
 }
 
-.button__text {
+.button__like {
   display: block;
   position: relative;
 }
 
-.button__text::before {
+.button__like::before {
   content: '';
   position: absolute;
   left: 0;
@@ -222,12 +230,12 @@
   transition: transform 0.3s ease-in-out;
 }
 
-.button__text:hover::before {
+.button__like:hover::before {
   transform: scaleX(1);
 }
 
-.button__text span,
-.button__text svg {
+.button__like span,
+.button__like svg {
   position: relative;
   z-index: 1;
   mix-blend-mode: difference;
@@ -235,12 +243,12 @@
   transition: color 0.5s ease;
 }
 
-.button__text .save-button-img {
+.button__like .save-button-img {
   filter: brightness(1) saturate(1);
   transition: filter 0.5s ease; 
 }
 
-.button__text:hover .save-button-img {
+.button__like:hover .save-button-img {
   filter: brightness(0) invert(1); 
 }
 
@@ -358,15 +366,6 @@ dialog::backdrop {
   justify-content: center;
 }
 
-@media (min-width: 900px) and (max-width: 1440px) {
-  .card {
-    max-width: 700px;
-    margin: auto;
-  }
-}
-
-@media (max-width: 899px) {
-  .card {
-      max-width: 100%; 
-  }
+.button-text-close {
+  text-transform: uppercase;
 }

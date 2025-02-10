@@ -6,35 +6,6 @@
 */
 
 
-/* Основные переменные */
-:root {
-    --background-color: rgb(255, 255, 255);
-    --background-image:
-        repeating-linear-gradient(
-            90deg, 
-            #d3d3d3 0px, 
-            #d3d3d3 2px, 
-            transparent 2px, 
-            transparent 4px
-        ),
-        repeating-linear-gradient(
-            180deg, 
-            #d3d3d3 0px, 
-            #d3d3d3 2px, 
-            transparent 2px, 
-            transparent 4px
-        ),
-        linear-gradient(
-            to bottom, 
-            #e7e7e7 0.01%, 
-            #1a1a1a 100%
-        );
-    --text-color: #000000;
-    --font-family: 'Inter', sans-serif;
-    --font-acent-family: 'Press Start 2P', sans-serif;
-    --watermark-border-color: rgb(255, 255, 255);
-    --inverse-text-color: #ffffff;
-}
 
 /* Светлая тема */
 :root.theme-light {
