@@ -4,7 +4,7 @@
 ✦ theme-dark — класс тёмной темы
 ✦ theme-light — класс светлой темы
 ✦ like-icon — для svg-иконки анимированного сердца
-✦ card__like-button — для кнопки Like рядом с иконкой
+✦ button — для кнопки Like рядом с иконкой
 ✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
@@ -31,14 +31,14 @@
 
   display: flex;
   flex-direction: column;
-  align-items: center; 
-  min-height: 100vh; 
+  align-items: center;
+  min-height: 100vh;
 
 }
 
 .header {
   width: 44rem;
-  background-image: none; 
+  background-image: none;
   background-color: var(--background-color);
   font-family: var(--font-acent-family);
   color: var(--text-color);
@@ -112,12 +112,12 @@
   height: 2px;
   background-color: currentColor;
   transform: scaleX(0);
-  transform-origin: left; 
-  transition: transform 0.3s ease; 
+  transform-origin: left;
+  transition: transform 0.3s ease;
 }
 
 .theme-menu__button:focus::after {
-  transform: scaleX(1); 
+  transform: scaleX(1);
 }
 
 .main {
@@ -130,7 +130,7 @@
 
 .card {
   border: 2px solid var(--text-color);
-  background-image: none; 
+  background-image: none;
   background-color: var(--background-color);
 }
 
@@ -161,11 +161,11 @@
   mix-blend-mode: hard-light;
   font-family: var(--font-acent-family);
   font-size: 14px;
-  text-shadow: 
-        -1px -1px 0 var(--watermark-border-color),  
-        1px -1px 0 var(--watermark-border-color),  
-        -1px 1px 0 var(--watermark-border-color),  
-        1px 1px 0 var(--watermark-border-color);
+  text-shadow:
+    -1px -1px 0 var(--watermark-border-color),
+    1px -1px 0 var(--watermark-border-color),
+    -1px 1px 0 var(--watermark-border-color),
+    1px 1px 0 var(--watermark-border-color);
 
   @supports (-webkit-text-stroke: 1px var(--watermark-border-color)) {
     -webkit-text-stroke: 1px var(--watermark-border-color);
@@ -179,7 +179,7 @@
   gap: 0.1rem;
 }
 
-.card__like-button {
+.button {
   background-color: transparent;
   border: 2px solid var(--text-color);
   width: 8.3rem;
@@ -190,34 +190,19 @@
   cursor: pointer;
 }
 
-.save-button {
-  background-color: transparent;
-  border: 2px solid var(--text-color);
-  padding: 1rem;
-  font-family: var(--font-acent-family);
-  font-size: 14px;
-  transition: box-shadow 0.3s ease;
-  cursor: pointer;
-  margin-bottom: 5rem;
-}
 
-
-.card__like-button:focus {
+.button:focus {
   outline: none;
   box-shadow: 2px 2px 0px var(--text-color);
 }
 
-.save-button:focus {
-  outline: none;
-  box-shadow: 2px 2px 0px var(--text-color);
-}
-
-.button__like {
+.button__wrapper {
   display: block;
+  background-color: white;
   position: relative;
 }
 
-.button__like::before {
+.button__wrapper::before {
   content: '';
   position: absolute;
   left: 0;
@@ -230,26 +215,17 @@
   transition: transform 0.3s ease-in-out;
 }
 
-.button__like:hover::before {
+
+.button__wrapper:hover::before {
   transform: scaleX(1);
 }
 
-.button__like span,
-.button__like svg {
+.button__text,
+.button__wrapper svg {
   position: relative;
   z-index: 1;
   mix-blend-mode: difference;
   color: var(--inverse-text-color);
-  transition: color 0.5s ease;
-}
-
-.button__like .save-button-img {
-  filter: brightness(1) saturate(1);
-  transition: filter 0.5s ease; 
-}
-
-.button__like:hover .save-button-img {
-  filter: brightness(0) invert(1); 
 }
 
 .like-icon {
@@ -270,7 +246,6 @@
   text-transform: uppercase;
   line-height: 1.5;
   font-family: var(--font-acent-family);
-  display: none;
 }
 
 .subscription-dialog[open] {
@@ -309,20 +284,23 @@
 
 dialog::backdrop {
   background-color: rgb(0 0 0 / 0.75);
-} 
+}
 
 @media (max-width: 1439px) {
-    .header {
-      width: 100%;
-    }
-    .main {
-      width: 100%;
-   }
+  .header {
+    width: 100%;
+  }
+
+  .main {
+    width: 100%;
+  }
+
   .card__image {
     width: 100%;
     height: auto;
   }
-  .save-button {
+
+  .button {
     display: flex;
     flex-direction: column;
     align-items: center;
