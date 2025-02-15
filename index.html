@@ -21,8 +21,7 @@
     <header class="header">
       <h1 class="header__title">&lt;/HTML&gt;</h1>
       <h2 class="header__subtitle">Закрывающий тег</h2>
-      <nav class="theme-menu header__theme-menu">
-        <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
+      <!-- <nav class="theme-menu header__theme-menu">
         <ul class="theme-menu__list">
           <li class="theme-menu__item">
             <button type="button" data-theme="dark" class="theme-menu__button">
@@ -45,7 +44,7 @@
             </button>
           </li>
         </ul>
-      </nav>
+      </nav> -->
     </header>
     <main class="main">
       <div class="card">
@@ -258,10 +257,10 @@
       </div>
 
       <div class="dialog-button-container">
-        <div class="button__wrapper">
+        <div class="button__wrapper dialog__button-wrapper">
           <button 
             type="button"
-            class="button"
+            class="button dialog__button"
             onclick="window['dialog-id'].showModal()" 
             aria-controls="dialog-id"
           >
@@ -274,19 +273,21 @@
 
           <dialog id="dialog-id" class='subscription-dialog'>
             <div class="dialog__content">
-              <svg width="21" height="21" class="dialog__content-img" alt="Дискета">
+              <svg width="42" height="42" class="dialog__content-img" alt="Дискета">
                 <use href="svg/floppy.svg#icon-grid"></use>
               </svg>
               <p class="dialog__content-text">Вставьте дискету, чтобы продолжить</p>
             </div>
-            <div class="button__wrapper">
-              <button 
-                class="button"
-                type="button"
-                onclick="window['dialog-id'].close()"
-              >
-                <p class="button__text">ok</p>
-              </button>
+            <div class="dialog__footer">
+              <div class="button__wrapper">
+                <button 
+                  class="button button__dialog"
+                  type="button"
+                  onclick="window['dialog-id'].close()"
+                >
+                  <p class="button__text">ok</p>
+                </button>
+              </div>
             </div>
           </dialog> 
 

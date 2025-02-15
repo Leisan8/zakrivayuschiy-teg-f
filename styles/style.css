@@ -49,7 +49,7 @@
   flex-direction: column;
   border: 2px solid var(--text-color);
   gap: 1.5rem;
-  padding-bottom: 2rem;
+  padding-bottom: 8rem;
 }
 
 .header__title {
@@ -136,17 +136,19 @@
 
 .card__title {
   font-variation-settings: 'wght' var(--font-weight-bold);
+  font-size: large;
   border: 2px solid var(--text-color);
   padding: 0.4rem;
 }
 
 .card__text {
-  gap: 1.2rem;
+  gap: 1.4rem;
   display: flex;
   flex-direction: column;
   padding-left: 1.7rem;
   padding-right: 1.7rem;
   font-size: 18px;
+  padding-top: 1.2rem;
 }
 
 .card__image-wrapper {
@@ -181,7 +183,6 @@
 
 .button {
   background-color: transparent;
-  border: 2px solid var(--text-color);
   width: 8.3rem;
   height: 2.5rem;
   font-family: var(--font-acent-family);
@@ -220,8 +221,7 @@
   transform: scaleX(1);
 }
 
-.button__text,
-.button__wrapper svg {
+.button__text {
   position: relative;
   z-index: 1;
   mix-blend-mode: difference;
@@ -232,12 +232,12 @@
   border: 2px solid transparent;
   background-color: transparent;
   cursor: pointer;
+  transition: border 0.3s ease;
 }
 
 .like-icon:focus {
   outline: none;
   border: 2px solid var(--text-color);
-  transition: border 0.3s ease;
 }
 
 .subscription-dialog {
@@ -246,6 +246,11 @@
   text-transform: uppercase;
   line-height: 1.5;
   font-family: var(--font-acent-family);
+  padding: 2rem 0;
+}
+
+.button__dialog {
+  width: 100%;
 }
 
 .subscription-dialog[open] {
@@ -264,12 +269,42 @@
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   width: 357px;
-  padding-top: 2rem;
 }
 
 .dialog__content-img {
   width: 3rem;
 }
+
+/* .save-button-img {
+  width: 21px;
+  height: 21px;
+  transition: filter 0.3s ease-in-out;
+}
+
+.button:hover .save-button-img {
+  filter: invert(1);
+} */
+
+#icon-grid {
+  mix-blend-mode: difference;
+  fill: var(--text-color);
+
+}
+
+.dialog__button-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.dialog__button {
+  width: 21rem;
+  height: 3.5rem;
+}
+
+.dialog__footer {
+  padding: 0 2rem;
+}
+
 
 .dialog__button__text {
   background: transparent;
