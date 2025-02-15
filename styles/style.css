@@ -36,6 +36,10 @@
 
 }
 
+.button {
+  justify-content: center;
+}
+
 .header {
   width: 44rem;
   background-image: none;
@@ -54,7 +58,7 @@
 
 .header__title {
   padding-top: 8rem;
-  font-size: 65px;
+  font-size: 4rem;
 }
 
 .header__subtitle {
@@ -322,8 +326,19 @@ dialog::backdrop {
 }
 
 @media (max-width: 1439px) {
+
+  .header__title {
+    font-size: 3rem;
+    padding-top: 7.6rem;
+  }
+
+  .header__subtitle {
+    font-size: 14px;
+  }
+
   .header {
     width: 100%;
+    padding-bottom: 7.5rem;
   }
 
   .main {
@@ -340,6 +355,16 @@ dialog::backdrop {
     flex-direction: column;
     align-items: center;
   }
+
+  .dialog__button {
+    width: 19.5rem;
+    height: 5rem;
+  }
+
+  .dialog__button {
+    gap: 0.5rem;
+  }
+  
 }
 
 .filter-grayscale {
