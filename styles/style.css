@@ -36,6 +36,11 @@
 
 }
 
+.card__icon-button {
+  border: none;
+  background: transparent;
+}
+
 .button {
   justify-content: center;
 }
@@ -175,6 +180,7 @@
 
   @supports (-webkit-text-stroke: 1px var(--watermark-border-color)) {
     -webkit-text-stroke: 1px var(--watermark-border-color);
+    text-shadow: none;
   }
 }
 
@@ -201,13 +207,13 @@
   box-shadow: 2px 2px 0px var(--text-color);
 }
 
-.button__wrapper {
+.button {
   display: block;
   background-color: white;
   position: relative;
 }
 
-.button__wrapper::before {
+.button::before {
   content: '';
   position: absolute;
   left: 0;
@@ -221,7 +227,7 @@
 }
 
 
-.button__wrapper:hover::before {
+.button:hover::before {
   transform: scaleX(1);
 }
 
@@ -288,12 +294,6 @@
 .button:hover .save-button-img {
   filter: invert(1);
 } */
-
-#icon-grid {
-  mix-blend-mode: difference;
-  fill: var(--text-color);
-
-}
 
 .dialog__button-wrapper {
   display: flex;
