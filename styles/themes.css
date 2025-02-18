@@ -37,30 +37,30 @@
 
 /* Тёмная тема */
 :root.theme-dark {
-    --background-color: rgb(0, 0, 0);
+    --background-color: rgb(255, 255, 255);
     --background-image:
         repeating-linear-gradient(
             90deg, 
-            #000000 0px, 
-            #000000 2px, 
+            #d3d3d3 0px, 
+            #d3d3d3 2px, 
             transparent 2px, 
             transparent 4px
         ),
         repeating-linear-gradient(
             180deg, 
-            #000000 0px, 
-            #000000 2px, 
+            #d3d3d3 0px, 
+            #d3d3d3 2px, 
             transparent 2px, 
             transparent 4px
         ),
         linear-gradient(
             to bottom, 
-            #007f0c 0.01%, 
-            #004306 100%
+            #e7e7e7 0.01%, 
+            #1a1a1a 100%
         );
-    --text-color: rgba(0, 204, 20, 1);
-    --watermark-border-color: rgb(0, 0, 0);
-    --inverse-text-color: rgba(0, 204, 20, 1);
+    --text-color: #000000;
+    --watermark-border-color: rgb(255, 255, 255);
+    --inverse-text-color: #ffffff;
 }
 
 /* Предпочтение тёмной темы пользователем */
