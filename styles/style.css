@@ -291,11 +291,8 @@
 }
 
 .save-button-img {
-  transition: filter 0.5s ease-in-out;
-}
-
-.button:hover .save-button-img {
   filter: invert(1);
+  mix-blend-mode: difference;
 }
 
 .dialog__button {
