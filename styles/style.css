@@ -39,6 +39,14 @@
 .card__icon-button {
   border: none;
   background: transparent;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.card__icon-button:focus {
+  outline: none;
+  border: solid 2px black;
 }
 
 .button {
@@ -159,7 +167,7 @@
   padding-right: 1.7rem;
   font-size: 18px;
   padding-top: 1.2rem;
-  line-height: 1.3;
+  line-height: 21px;
 }
 
 .card__image-wrapper {
@@ -190,7 +198,7 @@
   display: flex;
   justify-content: end;
   padding: 1.6rem;
-  gap: 0.15rem;
+  gap: 4px;
 }
 
 .button {
@@ -244,7 +252,6 @@
 }
 
 .like-icon {
-  border: 2px solid transparent;
   background-color: transparent;
   cursor: pointer;
   transition: border 0.3s ease;
