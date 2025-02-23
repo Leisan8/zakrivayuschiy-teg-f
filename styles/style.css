@@ -291,9 +291,8 @@
   align-items: center;
   justify-content: space-around;
   gap: 1rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  width: 357px;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .dialog__content-img {
