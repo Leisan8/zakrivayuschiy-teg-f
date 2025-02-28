@@ -374,6 +374,11 @@ dialog::backdrop {
     right: 3%;
     top: 5%;
   }
+
+  .save-button-img {
+    width: 28px;
+    height: 28px;
+  }
   
 }
 
